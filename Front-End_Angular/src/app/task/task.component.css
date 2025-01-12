@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.list-group-item {
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white !important;
+}
