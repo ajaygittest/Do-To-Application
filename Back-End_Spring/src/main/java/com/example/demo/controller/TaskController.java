@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Task;
 import com.example.demo.repository.TaskRepository;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+
 @RestController
 @CrossOrigin
 @RequestMapping("api/tasks")
@@ -26,6 +29,8 @@ public class TaskController {
 	private TaskRepository repo;
 	
 	@GetMapping("/hello-world")
+	@Operation(summary = "Add a new book", description = "Add a book to the catalog")
+    @ApiResponse(responseCode = "201", description = "Book created successfully")
 	public String helloWorld() {
 		return "Hello World";
 	}

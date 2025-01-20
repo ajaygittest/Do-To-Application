@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,10 +10,12 @@ import jakarta.persistence.Table;
 
 @Table(name="Tasks")
 @Entity
+@Schema(description = "Task Table Data Properties")
 public class Task {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Schema(description = "Unique identifier of the task", example = "1")
 	private Long id;
 
 	private String description;
